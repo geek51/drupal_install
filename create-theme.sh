@@ -37,10 +37,10 @@ echo -e $INFOTEXT >> $DIRPATH/$THEMENAME.info;
 #create css file
 echo "//FILE generated with drupal theme creator" >> $DIRPATH/css/style.$STYLEEXT;
 
-echo "[ok] structure created";
+echo "[\e[00;32mok\e[00m] structure created";
 
 if [ "$STYLEEXT" == "less" ]; then
-	command -v drush >/dev/null 2>&1 || { echo >&2 "[Warning] If drush is installed i can download less module."; exit 1; }
+	command -v drush >/dev/null 2>&1 || { echo >&2 "[\e[00;32mWarning\e[00m] If drush is installed i can download less module."; exit 1; }
 	
 	echo "Downloading less module";
 	
